@@ -1,0 +1,16 @@
+
+CREATE DATABASE Assessments
+GO
+USE Assessments;
+
+CREATE TABLE Assessment
+(
+    ID INT IDENTITY PRIMARY KEY NOT NULL,
+    FullName NVARCHAR(MAX) NOT NULL,
+    GroupName NVARCHAR(20) NOT NULL,
+    Average INT  CHECK (Average BETWEEN 1 AND 12) NOT NULL,
+    AssessMax INT CHECK (AssessMax BETWEEN 1 AND 12) NOT NULL,
+    AssessMin INT CHECK (AssessMin BETWEEN 1 AND 12) NOT NULL,
+    SubjectMax NVARCHAR(MAX) NOT NULL,
+    SubjectMin NVARCHAR(MAX) NOT NULL
+);
