@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="ADO.NET.Lab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ADO.NET"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="1400" Loaded="Lab_Loaded">
+    <Grid>
+        <Button Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Content="←" 
+                Background="#212121" Foreground="Azure" Click="Back_Click" BorderThickness="0" Cursor="Hand"/>
+        <DataGrid Name ="LabDG" Width="1100" Height="650" GridLinesVisibility="None"/>
+    </Grid>
+</UserControl>
