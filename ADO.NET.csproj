@@ -8,11 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="assets\Background.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="assets\" />
+    <Compile Remove="assets\**" />
+    <EmbeddedResource Remove="assets\**" />
+    <None Remove="assets\**" />
+    <Page Remove="assets\**" />
   </ItemGroup>
 
   <ItemGroup>
