@@ -1,0 +1,12 @@
+CREATE DATABASE FruitsAndVegetables
+GO
+USE FruitsAndVegetables;
+
+CREATE TABLE Info
+(
+    ID INT IDENTITY PRIMARY KEY NOT NULL,
+    [Name] NVARCHAR(50) NOT NULL,
+    [Type] NVARCHAR(20) NOT NULL,
+    Color NVARCHAR(20) NOT NULL,
+    CaloricContent INT NOT NULL
+);
