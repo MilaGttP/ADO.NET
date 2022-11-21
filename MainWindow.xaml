@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ADO.NET"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        d:DesignHeight="850" d:DesignWidth="1400" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" Background="#212121">
 
+    <Grid>
+        <DataGrid Name ="DG" Width="1100" Height="650" GridLinesVisibility="None" Background="#ffffff"/>
     </Grid>
 </Window>
