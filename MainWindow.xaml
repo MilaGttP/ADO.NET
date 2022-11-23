@@ -5,8 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ADO.NET"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="900" Width="1500" Background="#212121" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.RowDefinitions>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.35*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical" Background="#424242">
+
+            <Expander Header="Showing" FontSize="20" Foreground="Azure" Margin="0 25 0 0">
+                <StackPanel>
+                    <Button Content="Show all" Click="ShowAll_Click"/>
+                    <Button Content="Show all stationery types"/>
+                    <Button Content="Show all managers"/>
+                    <Button Content="Stationery max quantity"/>
+                    <Button Content="Stationery min quantity"/>
+                    <Button Content="Stationery max price"/>
+                    <Button Content="Stationery min price"/>
+                </StackPanel>
+            </Expander>
+
+            <Expander Header="Adding" FontSize="20" Foreground="Azure">
+                <StackPanel>
+                    <Button Content="Add stationery"/>
+                    <Button Content="Add manager"/>
+                    <Button Content="Add customer"/>
+                </StackPanel>
+            </Expander>
+
+            <Expander Header="Refreshing" FontSize="20" Foreground="Azure">
+                <StackPanel>
+                    <Button Content="Refresh stationery"/>
+                    <Button Content="Refresh manager"/>
+                    <Button Content="Refresh customer"/>
+                </StackPanel>
+            </Expander>
+
+            <Expander Header="Deleting" FontSize="20" Foreground="Azure">
+                <StackPanel>
+                    <Button Content="Delete stationery"/>
+                    <Button Content="Delete manager"/>
+                    <Button Content="Delete customer"/>
+                </StackPanel>
+            </Expander>
+
+        </StackPanel>
+
+        <DataGrid Grid.Column="1" Background="#ffffff" Width="950" Height="750"/>
 
     </Grid>
 </Window>
