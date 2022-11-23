@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ADO.NET"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="1500" Background="#212121" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="900" Width="1500" Background="#212121" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
         </Grid.RowDefinitions>
@@ -18,13 +18,13 @@
 
             <Expander Header="Showing" FontSize="20" Foreground="Azure" Margin="0 25 0 0">
                 <StackPanel>
-                    <Button Content="Show all" Click="ShowAll_Click"/>
-                    <Button Content="Show all stationery types"/>
-                    <Button Content="Show all managers"/>
-                    <Button Content="Stationery max quantity"/>
-                    <Button Content="Stationery min quantity"/>
-                    <Button Content="Stationery max price"/>
-                    <Button Content="Stationery min price"/>
+                    <Button Content="Show all stationery" Click="ShowAllStationery_Click"/>
+                    <Button Content="Show all stationery types" Click="ShowAllStatTypes_Click"/>
+                    <Button Content="Show all managers" Click="ShowAllManagers_Click"/>
+                    <Button Content="Stationery max quantity" Click="ShowMaxQuantity_Click"/>
+                    <Button Content="Stationery min quantity" Click="ShowMinQuantity_Click"/>
+                    <Button Content="Stationery max price" Click="ShowMaxPrice_Click"/>
+                    <Button Content="Stationery min price" Click="ShowMinPrice_Click"/>
                 </StackPanel>
             </Expander>
 
@@ -54,7 +54,7 @@
 
         </StackPanel>
 
-        <DataGrid Grid.Column="1" Background="#ffffff" Width="950" Height="750"/>
+        <DataGrid x:Name="DG" Grid.Column="1" Background="#ffffff" Width="950" Height="750"/>
 
     </Grid>
 </Window>
