@@ -20,9 +20,32 @@ namespace ADO.NET
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string connectionString;
+        private string DataSrc;
+        private string Catalog;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void TBDataSrc_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            DataSrc = TBDataSrc.Text;
+        }
+
+        private void TBCatalog_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Catalog = TBCatalog.Text;
+            connectionString = @$"Data Source={DataSrc}\SQLEXPRESS;Initial Catalog={Catalog};Integrated Security=True;Connect Timeout=30;
+                Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        }
+
+        private void TBDataSrc_PreviewMouseDown(object sender, MouseButtonEventArgs e) => TBDataSrc.Text = " ";
+        private void TBCatalog_PreviewMouseDown(object sender, MouseButtonEventArgs e) => TBCatalog.Text = " ";
+
+        private void ShowTable_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

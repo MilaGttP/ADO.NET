@@ -5,8 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ADO.NET"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="900" Width="1500" Background="#212121" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.RowDefinitions>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical" Background="#424242">
+
+            <Expander Header="Showing" FontSize="20" Foreground="Azure" Margin="0 25 0 0">
+                <StackPanel>
+                    <Button Content="Show table" Click="ShowTable_Click"/>
+                </StackPanel>
+            </Expander>
+
+            <Expander Header="Adding" FontSize="20" Foreground="Azure">
+                <StackPanel>
+                    
+                </StackPanel>
+            </Expander>
+
+            <Expander Header="Refreshing" FontSize="20" Foreground="Azure">
+                <StackPanel>
+                    
+                </StackPanel>
+            </Expander>
+
+            <Expander Header="Deleting" FontSize="20" Foreground="Azure">
+                <StackPanel>
+                    
+                </StackPanel>
+            </Expander>
+
+        </StackPanel>
+
+        <TextBox x:Name="TBDataSrc" Text="Data source" Grid.Column="1" Background="#f2f2f2f2" Width="1050" Height="30" FontSize="16"
+                 VerticalAlignment="Top" Margin="0 60 0 0" TextChanged="TBDataSrc_TextChanged" PreviewMouseDown="TBDataSrc_PreviewMouseDown"/>
+
+        <TextBox x:Name="TBCatalog" Text="Catalog" Grid.Column="1" Background="#f2f2f2f2" Width="1050" Height="30" FontSize="16"
+                 VerticalAlignment="Top" Margin="0 110 0 0" TextChanged="TBDataSrc_TextChanged" PreviewMouseDown="TBCatalog_PreviewMouseDown"/>
+
+        <DataGrid x:Name="DG" Grid.Column="1" Background="#ffffff" Width="1050" Height="650" Margin="0 100 0 0"/>
+        
 
     </Grid>
 </Window>
