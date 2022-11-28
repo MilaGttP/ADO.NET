@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ADO.NET"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="900" Width="1500" Background="#212121" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.RowDefinitions>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.35*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical" Background="#424242">
+            
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="Azure"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="Margin" Value="5"/>
+                    <Setter Property="Width" Value="340"/>
+                    <Setter Property="Height" Value="50"/>
+                </Style>
+            </StackPanel.Resources>
+            
+            <Button Content="Show all countries" Click="ShowAll_Click"/>
+            <Button Content="Show names of countries" Click="ShowNamesCountries_Click"/>
+            <Button Content="Show names of capitals" Click="ShowNamesCapitals_Click"/>
+            <Button Content="Show names of big cities" Click="ShowNamesBigCities_Click"/>
+            <Button Content="Show names of capitals > 5.000.000" Click="ShowNamesBigCapitals_Click"/>
+            <Button Content="Show names of all europe countries" Click="ShowNamesEurope_Click"/>
+            <Button Content="Show names of current square" Click="ShowNamesCounriesSquare_Click"/>
+            <Button Content="Show names of capitals a and p" Click="ShowCapitalsAP_Click"/>
+            <Button Content="Show names of capitals begin with k" Click="ShowCapitalsK_Click"/>
+            <Button Content="Show names of countries with current square" Click="ShowCountriesSquare_Click"/>
+            <Button Content="Show names of countries with current population" Click="ShowCountriesPopulation_Click"/>
+
+        </StackPanel>
+
+        <DataGrid x:Name="DG" Grid.Column="1" Background="#ffffff" Width="950" Height="750"/>
 
     </Grid>
 </Window>

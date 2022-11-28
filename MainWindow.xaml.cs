@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace ADO.NET
 {
     /// <summary>
@@ -20,9 +21,66 @@ namespace ADO.NET
     /// </summary>
     public partial class MainWindow : Window
     {
+        string connectionString = @"Data Source=WIN-DB5IFPI2TC8\SQLEXPRESS;Initial Catalog=Countries;Integrated Security=True;
+                                  Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ShowAll_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ShowNamesCountries_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ShowNamesCapitals_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ShowNamesBigCities_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ShowNamesBigCapitals_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ShowNamesEurope_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ShowNamesCounriesSquare_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ShowCapitalsAP_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ShowCapitalsK_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ShowCountriesSquare_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ShowCountriesPopulation_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
