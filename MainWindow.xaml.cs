@@ -30,7 +30,7 @@ namespace ADO.NET
 
         private void ShowAll_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void ShowNamesCountries_Click(object sender, RoutedEventArgs e)
